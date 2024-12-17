@@ -28,3 +28,20 @@ SFMS-9221: Testing for Account Dynamic Forms - Custom Actions (Front Office)
     ${data_requests}=         Set Variable                         SA Test Account1
     ClickText                 ${data_requests}                     anchor=SAECR_01
     Sleep                     5s
+
+    VerifyText                Follow
+    Sleep                     1s
+    VerifyText                Edit
+    Sleep                     1s
+    VerifyText                Customer 360
+    Sleep                     1s
+    VerifyText                Health Customer DIG
+    Sleep                     1s
+    ClickText                 Show more actions
+    Sleep                     1s
+    VerifyText                New Task
+    Sleep                     1s
+    VerifyText                Log a Call
+    Sleep                     1s
+    VerifyText                New Event
+    Sleep                     1s
