@@ -31,13 +31,15 @@ SFMS-9221: Testing for Account Dynamic Forms - Custom Actions (Front Office)
 
     VerifyText                Follow
     Sleep                     1s
-    VerifyText                Edit
+    VerifyText                Edit                        anchor=Customer 360
     Sleep                     1s
     VerifyText                Customer 360
     Sleep                     1s
     VerifyText                Health Customer DIG
     Sleep                     1s
-    ClickText                 Show more actions
+    ${Subject}=               Set Variable                          Health Customer DIG
+    ${Subject1}=               Set Variable                         Show more actions
+    ClickText                 (//*[text()\='${Subject}']//following::span[text()\='${Subject1}'])[1] 
     Sleep                     1s
     VerifyText                New Task
     Sleep                     1s
@@ -45,3 +47,4 @@ SFMS-9221: Testing for Account Dynamic Forms - Custom Actions (Front Office)
     Sleep                     1s
     VerifyText                New Event
     Sleep                     1s
+    
